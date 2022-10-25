@@ -1,0 +1,63 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 24%;
+    height: 80%;
+    background-color: aquamarine;
+    border: 2px solid rebeccapurple;
+    border-radius: 10px;
+
+
+
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+.row {
+    margin: 10px;
+
+
+}
+
+.button {
+    padding: 20px;
+    margin: 0 15px;
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 60px;
+    background-color: antiquewhite;
+    color: blue;
+
+
+
+}
+
+.mx-auto {
+    margin: auto;
+}
+
+.row input {
+    margin: 0;
+    padding: 10px 0px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 19px;
+    width: 280px;
+    color: brown;
+}
