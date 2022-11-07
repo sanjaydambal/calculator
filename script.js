@@ -1,24 +1,25 @@
-let string = '';
-let buttons = document.querySelectorAll('.button');
-Array.from(buttons).forEach((button) => {
-    button.addEventListener('click', (e) => {
-        if (e.target.innerHTML == "=") {
-            string = eval(string);
-            document.querySelector('input').value = string;
+let screen = document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+let screenValue = "";
+for (item of buttons) {
+    item.addEventListener('click', (e) => {
+        buttonText = e.target.innerText;
+        console.log('button text is ', buttonText);
+        if (buttonText == 'X') {
+            buttonText = '*';
+            screenValue += buttonText;
+            screen.value = screenValue;
         }
-        else if (e.target.innerHTML == "%") {
-            string = string*0.01;
-            document.querySelector('input').value = string;
+        else if (buttonText == 'C') {
+            screenValue = "";
+            screen.value = screenValue;
         }
-
-        else if (e.target.innerHTML == "AC") {
-            string = " ";
-            document.querySelector('input').value = string;
+        else if (buttonText == '=') {
+            screen.value = eval(screenValue);
         }
         else {
-            console.log(e.target)
-            string = string + e.target.innerHTML;
-            document.querySelector('input').value = string;
+            screenValue += buttonText;
+            screen.value = screenValue;
         }
     })
-})
+}
